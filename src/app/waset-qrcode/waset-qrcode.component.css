@@ -1,14 +1,79 @@
+/* توحيد الألوان مع الهيدر والفوتر */
+
+/* header.component.css */
+.header {
+    background-color: #1c3d6b;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: rtl;
+    width: 100%;
+}
+
+.header-logo {
+    margin: 20px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-img {
+    width: 120px;
+    height: auto;
+}
+
+.menu-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* document.component.css */
 .document-container {
     max-width: 600px;
-    /* Increase the width for larger screens */
     margin: 4rem auto;
     background-color: #f0f8f8;
-    /* Light background similar to the image */
+    /* لون خلفية فاتح */
     border-radius: 5px;
     padding: 20px;
     font-family: 'Amiri', Arial, sans-serif;
     text-align: right;
-    /* Align content to the right */
+    color: #000;
+    /* النص باللون الأسود */
+}
+
+.document-title {
+    color: #436fb5;
+    padding-bottom: 40px;
+    /* عنوان الوثيقة باللون الأزرق الداكن */
+    font-size: 42px !important;
+    line-height: 52px !important;
+    font-weight: 700 !important;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.status-btn {
+    background-color: #5cb85c;
+    /* زر أخضر */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    width: 25%;
 }
 
 .document-field {
@@ -18,40 +83,139 @@
 .document-label {
     display: block;
     font-weight: bold;
-    color: green;
-    /* Make the labels green */
+    color: #004e7c;
+    /* اللون الأزرق الداكن */
     margin-bottom: 5px;
 }
 
 .document-value {
     background-color: #e7eaf3;
-    /* Same as the field background color in the image */
+    /* خلفية الحقول بلون فاتح */
     padding: 10px;
     border-radius: 4px;
     font-size: 16px;
-    color: black;
+    color: #1c3d6b;
+    /* النص باللون الأزرق الداكن */
     font-weight: bold;
-    /* Darker text for better readability */
 }
 
 .description {
-    color: black;
+    color: #000;
+    /* النص باللون الأسود */
     font-size: 18px;
     line-height: 1.6;
     margin-top: 20px;
 }
 
+.footer {
+    padding: 85px 0;
+    background-color: #1c3d6b;
+    color: white;
+    text-align: center;
+    margin: 0 !important;
+    border: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    /* توسيط المحتوى أفقياً */
+    align-items: center;
+    /* توسيط المحتوى رأسياً */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex-basis: 100%;
+    /* كل جزء يأخذ 100% عرض */
+    display: flex;
+    justify-content: center;
+    /* توسيط أفقياً */
+    align-items: center;
+    /* توسيط رأسياً */
+    flex-direction: column;
+    /* ترتيب العناصر عمودياً */
+}
+
+.footer-left img {
+    width: 90%;
+    /* ضبط حجم الصورة */
+}
+
+.footer-center h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.footer-center p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.footer-links {
+    margin-top: 15px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 15px;
+}
+
+.footer-links span {
+    color: white;
+    margin: 0 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    /* توسيط الأيقونات أفقياً */
+    align-items: center;
+    /* توسيط الأيقونات رأسياً */
+}
+
+.social-icons a {
+    color: white;
+    font-size: 35px;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #00d1b2;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .document-container {
-        max-width: 100%;
-        /* Adjust width for smaller screens */
-        padding: 10px;
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-links {
+        display: block;
+        margin-top: 20px;
     }
 }
 
 @media (min-width: 1200px) {
     .document-container {
         max-width: 800px;
-        /* Further increase the width for very large screens */
     }
 }

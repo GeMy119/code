@@ -1,0 +1,16 @@
+* {
+    direction: rtl;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+html {
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    width: 100% !important;
+}
+
+body {
+    margin: 0 !important;
+    padding: 0;
+}

@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    direction: rtl;
+    box-sizing: border-box;
+
+}
+
+html {
+    box-sizing: border-box !important;
+
+    width: 100% !important;
+}
+
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+}

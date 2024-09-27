@@ -1,3 +1,2 @@
-<app-waset-qrcode>
-
-</app-waset-qrcode>
+<app-loading *ngIf="isLoading"></app-loading>
+<app-waset-qrcode *ngIf="!isLoading"></app-waset-qrcode>
